@@ -1,0 +1,61 @@
+/* pages/active/active.wxss */
+.active-page .goods-box{
+  overflow: hidden;
+  padding: 0 10px 10px;
+}
+
+.active-page .goods-item{
+  float: left;
+  width: calc(50% - 5px);
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.active-page .goods-first{
+  margin-right: 5px;
+}
+
+.active-page .goods-second{
+  margin-left: 5px;
+}
+
+.auto-img{
+  width: 100%;
+  display: block;
+}
+
+.clearfix{
+  overflow: hidden;
+}
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.hot-price{
+  color: #e4393c;
+  font-size: 12px;
+}
+
+.old-price{
+  color: #aaa;
+  font-size: 12px;
+  text-decoration: line-through;
+}
+.name{
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.active-page .info{
+  padding: 0 5px 5px;
+}
+
+.one-text{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

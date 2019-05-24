@@ -1,0 +1,29 @@
+<view class="order">
+
+  <view class="order-item" wx:for="{{orderData}}" wx:key="{{index}}">
+    <view class="order-title">
+      <view class="order-id">订单编号: {{item.orderId}}</view>
+      <view data-orderid="{{item.orderId}}" data-index="{{index}}" class="rm" bindtap='removeOrder'>删除</view>
+    </view>
+    <view class="order-time">订单时间: {{item.orderTime}}</view>
+    <view>
+      <view bindtap="previewDetail" data-goodsid="{{value.goodsId}}" class="item-goods line" wx:for="{{item.goods}}" wx:for-index="key" wx:for-item="value" wx:key="{{key}}">
+        <view class="item-goods-img">
+          <image class="auto-img" src="{{value.goodsImage}}" mode="widthFix"></image>
+        </view>
+        <view class="item-goods-info">
+          <view class="goods-name">{{value.goodsName}}</view>
+          <view class="goods-box">
+            <view class="goods-price">
+              <text wx:if="{{value.isHot}}" class="hot-price">活动价：{{value.goodsHotPrice}}</text>
+                    <text class="{{value.isHot ? 'old-price': 'hot-price'}}">￥{{value.goodsPrice}}</text>
+            </view>
+            <view class="goods-count">x{{value.goodsCount}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="total-money">订单总价：￥{{item.total}}</view>
+  </view>
+
+</view>

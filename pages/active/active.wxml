@@ -1,0 +1,21 @@
+<!--pages/active/active.wxml-->
+<view class="active-page">
+
+  <view class="goods-box">
+    <view bindtap='goPage' data-goodsid="{{item.goodsId}}" class="goods-item {{index % 2 == 0 ? 'goods-first' : 'goods-second'}}" wx:for="{{hotGoodsList}}" wx:key="{{index}}">
+      <view>
+        <image class="auto-img" src="{{item.goodsImage}}" mode="widthFix"></image>
+      </view>
+      <view class="info">
+        <view class="name one-text">{{item.goodsName}}</view>
+        <view class="clearfix">
+          <text wx:if="{{item.isHot}}" class="hot-price fl">活动价：￥{{item.goodsHotPrice}}</text>
+          <text class="fr {{item.isHot ? 'old-price': 'hot-price'}}">￥{{item.goodsPrice}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

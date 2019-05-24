@@ -1,0 +1,16 @@
+<!--pages/my/my.wxml-->
+<view class='info'>
+      <view class='photo'>
+            <image src='{{avatarUrl}}'></image>
+      </view>
+      <view class='nickname'>
+            {{nickName}}
+      </view>
+</view>
+
+<view class='wode'>
+      <view bindtap='goPage' data-url="{{item.url}}" class='item' wx:for="{{mode}}" wx:key="{{index}}">
+            {{item.title}}
+            <image src="../../image/icon-arrow.png"></image>
+      </view>
+</view>
